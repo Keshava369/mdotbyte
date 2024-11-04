@@ -16,9 +16,9 @@ function Overlay({ onClose }) {
 
   return (
     <div className={`overlay ${show ? 'show' : ''}`}>
-      <img src="/Mdot_Logo.jpg" alt="Logo" className="overlay-logo" />
+      {/* <img src="/Mdot_Logo.jpg" alt="Logo" className="overlay-logo" /> */}
       <div className="company-name">
-              <strong>MDot Byte Consulting Pvt Ltd</strong>
+              <strong>MDOT BYTE Consulting Pvt Ltd</strong>
       </div>
     </div>
   );

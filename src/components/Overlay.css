@@ -30,6 +30,7 @@
     font-weight: bold;
     line-height: 1.2; /* Adjust line height for better spacing */
     white-space: nowrap; /* Ensure the text stays on one line */
+    animation: popUp 1s ease-out;
   }
   
   @keyframes popUp {

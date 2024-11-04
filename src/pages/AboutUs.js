@@ -49,7 +49,7 @@ function AboutUs() {
         <div className="team-cards">
           {/* Repeat this block for each team member */}
           <div className="team-card">
-            <div className="team-card-background" style={{ backgroundImage: 'url(/Images/person1.jpeg)' }}></div>
+            <div className="team-card-background" style={{ backgroundImage: 'url(/person1.jpeg)' }}></div>
             <div className="team-card-content">
               <h3>Mukunda Reddy</h3>
               <p>Chief Executive Officer</p>
@@ -62,7 +62,7 @@ function AboutUs() {
           </div>
           {/* Add more team cards here */}
           <div className="team-card">
-            <div className="team-card-background" style={{ backgroundImage: 'url(/Images/person2.jpeg)' }}></div>
+            <div className="team-card-background" style={{ backgroundImage: 'url(/person2.jpeg)' }}></div>
             <div className="team-card-content">
               <h3>Maheshwari</h3>
               <p>Chief Technical Officer</p>
