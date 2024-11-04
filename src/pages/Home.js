@@ -31,7 +31,7 @@ function Home() {
       <div className="hero-section">
         <div className="background-image"></div>
         
-          <h1>MDot Byte Consulting Pvt Ltd</h1>
+          <h1>MDotByte Consulting Pvt Ltd</h1>
         
       </div>
 

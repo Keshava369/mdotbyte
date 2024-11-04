@@ -19,7 +19,7 @@ function Navbar() {
           <NavLink to="/" exact="true" className="logo-link">
             <img src="/Mdot_Logo.jpg" alt="Logo" className="logo" />
             <div className="company-name">
-              <strong>MDot Byte Consulting Pvt Ltd</strong>
+              <strong>MDotByte Consulting Pvt Ltd</strong>
             </div>
           </NavLink>
         </div>
