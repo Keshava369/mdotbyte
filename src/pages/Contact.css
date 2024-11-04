@@ -1,0 +1,137 @@
+.Contact {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+  }
+
+  .Contact-background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video covers the entire section */
+    z-index: -1; /* Sends the video behind the text */
+    filter: brightness(0.4);
+  }
+  
+  .Contact-hero-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    height: 80vh;
+    text-align: center;
+    padding-top: 10vh;
+    position: relative; /* Ensures the background image is properly positioned */
+  }
+
+  .Contact-hero-section h1 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 4rem;
+    font-weight: bold;
+    margin-top: 0vh;
+  }
+  
+  @media (max-width: 768px) {
+    .Contact-hero-section h1 {
+      font-size: 2rem;
+    }
+  }
+
+.Contact-contact-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 3rem;
+    background-color: white;
+  }
+  
+  .Contact-contact-info {
+    flex: 1;
+    padding-right: 2rem;
+  }
+  
+  .Contact-contact-info h2 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 4rem;
+    margin-bottom: 2rem;
+    text-align: left;
+  }
+  
+  .Contact-contact-info .subtitle {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2rem;
+    margin: 0.5rem 0;
+  }
+  
+  .Contact-contact-form {
+    flex: 1;
+  }
+  
+  .Contact-contact-form form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .Contact-form-row {
+    margin-bottom: 1rem;
+    position: relative;
+  }
+  
+  .Contact-form-row label {
+    position: absolute;
+    top: -0.75rem;
+    right: 0;
+    background-color: white;
+    padding: 0 0.5rem;
+  }
+  
+  .Contact-form-row input,
+  .Contact-form-row textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid transparent;
+    background-color: lightgrey;
+    border-radius: 4px;
+    outline: none;
+  }
+  
+  .Contact-form-row input:focus,
+  .Contact-form-row textarea:focus {
+    background-color: grey;
+    border: 1px solid darkgrey;
+  }
+  
+  .Contact-form-row textarea {
+    height: 150px;
+    resize: vertical;
+  }
+  
+  .Contact-form-row button {
+    background-color: darkgrey;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .Contact-form-row button:hover {
+    background-color:grey;
+  }
+
+  .Contact-map-section {
+    width: 100%;
+    height: 400px; /* Define the height for the map */
+    margin-top: 2rem;
+  }
+  
+  .Contact-map-section iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }

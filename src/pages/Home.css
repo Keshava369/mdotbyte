@@ -1,0 +1,285 @@
+.home {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.hero-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  height: 80vh;
+  text-align: center;
+  padding-top: 10vh;
+  position: relative; /* Ensures the background image is properly positioned */
+}
+
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/public/Mdot_Logo.jpg'); /* Adjust path if needed */
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  filter: brightness(0.2);
+}
+
+.hero-section h1 {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 4rem;
+  font-weight: bold;
+  margin-top: 0vh;
+}
+
+
+
+@media (max-width: 768px) {
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+}
+
+.intro-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem;
+  height: 50vh;
+  background-color: #f4f4f4;
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+  position: relative; /* Ensure proper positioning within the layout */
+}
+
+.intro-section.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.intro-logo {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gs3-logo {
+  width: 50%;
+  height: auto;
+}
+
+.intro-content {
+  flex: 2;
+  padding-left: 2rem;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #333; /* Ensure text is visible against the background */
+}
+
+.intro-content p {
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .intro-section {
+    flex-direction: column;
+    text-align: center;
+    height: auto;
+  }
+
+  .intro-content {
+    padding-left: 0;
+    padding-top: 2rem;
+  }
+
+  .gs3-logo {
+    width: 70%;
+  }
+}
+
+.expertise-section {
+  background-color: black;
+  color: white;
+  padding: 3rem 2rem;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.expertise-section.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.expertise-section h2 {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 4rem;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.expertise-cards {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 2rem;
+}
+
+.expertise-card {
+  background-color: #333;
+  border-radius: 0px;
+  padding: 1rem;
+  width: 30%;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+}
+
+.icon {
+  font-size: 3rem;
+  text-align: center;
+}
+
+.expertise-card h3 {
+  font-size: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.expertise-card p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.know-more {
+  color: #1e90ff;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 2rem;
+  text-align: right;
+  text-decoration: underline;
+}
+
+.know-more:hover {
+  text-decoration: underline;
+}
+
+.expertise-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .expertise-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .expertise-card {
+    width: 80%;
+    margin-bottom: 2rem;
+  }
+}
+
+.contact-section {
+  display: flex;
+  justify-content: space-between;
+  padding: 3rem;
+  background-color: white;
+}
+
+.contact-info {
+  flex: 1;
+  padding-right: 2rem;
+}
+
+.contact-info h2 {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 4rem;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.contact-info .subtitle {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 2rem;
+  margin: 0.5rem 0;
+}
+
+.contact-form {
+  flex: 1;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-row {
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.form-row label {
+  position: absolute;
+  top: -0.75rem;
+  right: 0;
+  background-color: white;
+  padding: 0 0.5rem;
+}
+
+.form-row input,
+.form-row textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid transparent;
+  background-color: lightgrey;
+  border-radius: 4px;
+  outline: none;
+}
+
+.form-row input:focus,
+.form-row textarea:focus {
+  background-color: grey;
+  border: 1px solid darkgrey;
+}
+
+.form-row textarea {
+  height: 150px;
+  resize: vertical;
+}
+
+.form-row button {
+  background-color: darkgrey;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+.form-row button:hover {
+  background-color:grey;
+}
+
+.map-section {
+  width: 100%;
+  height: 400px; /* Define the height for the map */
+  margin-top: 2rem;
+}
+
+.map-section iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
