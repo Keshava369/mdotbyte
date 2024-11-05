@@ -64,7 +64,7 @@ function Services() {
   return (
     <div className="services">
       <div className="hero-section-services">
-      <video className="services-background-video" autoPlay loop muted>
+      <video className="services-background-video" autoPlay loop muted playsInline>
           <source src="/Images/services.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>

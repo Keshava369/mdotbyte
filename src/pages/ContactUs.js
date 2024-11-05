@@ -44,7 +44,7 @@ function ContactUs() {
   return (
     <div className="Contact">
       <div className="Contact-hero-section">
-      <video className="services-background-video" autoPlay loop muted>
+      <video className="services-background-video" autoPlay loop muted playsInline>
           <source src="/Images/contact.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>

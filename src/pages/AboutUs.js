@@ -26,7 +26,7 @@ function AboutUs() {
   return (
     <div className="about">
       <div className="about-hero-section">
-        <video className="about-background-video" autoPlay loop muted>
+        <video className="about-background-video" autoPlay loop muted playsInline>
           <source src="/Images/about.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>

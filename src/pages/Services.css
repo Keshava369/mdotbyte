@@ -194,6 +194,7 @@
     letter-spacing: 2px;
     color: #42b883;
     font-size: 25px;
+    align-items: center;
 }
 .section1 p{
     font-style: italic;
@@ -218,6 +219,7 @@
     letter-spacing: 2px;
     color: #347474;
     font-size: 25px;
+    align-items: center;
 }
 .section2 p{
     font-style: italic;
@@ -262,6 +264,7 @@
     letter-spacing: 2px;
     color: #35495e;
     font-size: 25px;
+    align-items: center;
 }
 .section3 p{
     font-style: italic;
@@ -285,6 +288,7 @@
     letter-spacing: 2px;
     color: #ff7e67;
     font-size: 25px;
+    align-items: center;
 }
 .section4 p{
     font-style: italic;
