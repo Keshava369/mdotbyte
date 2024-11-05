@@ -1,6 +1,7 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Home.css';
+import emailjs from '@emailjs/browser';
 
 function Home() {
   useEffect(() => {
@@ -25,6 +26,41 @@ function Home() {
   }, []);
 
   const navigate = useNavigate();
+
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [mobile, setMobile] = useState('');
+  const [message, setMessage] = useState(''); 
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const serviceId = 'service_nbgbay8';
+    const templateId = 'template_d3wdklh';
+    const publicKey = 'RffKyC_2KYrFRmxX6';
+    
+    const templateParams ={
+         from_name:name,
+         email:email,
+         mobile:mobile,
+         to_name:'Keshav',
+         message:message
+    };
+
+    emailjs.send(serviceId,templateId,templateParams,publicKey).then((response) => {
+      console.log('email sent successfully',response);
+      alert('Email sent successfully');
+      setName('');
+      setEmail('');
+      setMobile('');
+      setMessage('');
+    })
+    .catch((error)=>{
+      console.error('Error sending email:',error);
+      alert('Something went try!! Please try again');
+    })
+
+  }
 
   return (
     <div className="home">
@@ -82,21 +118,21 @@ function Home() {
           <p><strong>Email:</strong> xyz@gmail.com</p>
         </div>
         <div className="contact-form">
-          <form>
+          <form onSubmit={handleSubmit}>
             <div className="form-row">
               
-              <input type="text" id="name" name="name" placeholder="Your Name" required />
+              <input type="text" id="name" name="name" placeholder="Your Name" required value={name} onChange={(e) => setName(e.target.value)}/>
               </div>
               <div className="form-row">
-              <input type="text" id="mobile" name="mobile" placeholder="Your Mobile Number" required />
+              <input type="text" id="mobile" name="mobile" placeholder="Your Mobile Number" required value={mobile} onChange={(e) => setMobile(e.target.value)}/>
             </div>
             <div className="form-row">
               
-              <input type="email" id="email" name="email" placeholder="Your Email" required />
+              <input type="email" id="email" name="email" placeholder="Your Email" required value={email} onChange={(e) => setEmail(e.target.value)} />
             </div>
             <div className="form-row">
               
-              <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+              <textarea id="message" name="message" placeholder="Your Message" required value={message} onChange={(e) => setMessage(e.target.value)}></textarea>
             </div>
             <div className="form-row">
               <button type="submit">Send</button>

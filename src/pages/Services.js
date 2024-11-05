@@ -1,5 +1,6 @@
 // src/pages/Services.js
-import React, { useEffect } from 'react';
+import React, { useEffect,useState } from 'react';
+import emailjs from '@emailjs/browser';
 
 import './Services.css';
 
@@ -24,6 +25,41 @@ function Services() {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [mobile, setMobile] = useState('');
+  const [message, setMessage] = useState(''); 
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const serviceId = 'service_nbgbay8';
+    const templateId = 'template_d3wdklh';
+    const publicKey = 'RffKyC_2KYrFRmxX6';
+    
+    const templateParams ={
+         from_name:name,
+         email:email,
+         mobile:mobile,
+         to_name:'Keshav',
+         message:message
+    };
+
+    emailjs.send(serviceId,templateId,templateParams,publicKey).then((response) => {
+      console.log('email sent successfully',response);
+      alert('Email sent successfully');
+      setName('');
+      setEmail('');
+      setMobile('');
+      setMessage('');
+    })
+    .catch((error)=>{
+      console.error('Error sending email:',error);
+      alert('Something went try!! Please try again');
+    })
+
+  }
 
   return (
     <div className="services">
@@ -100,14 +136,14 @@ function Services() {
   <div class="box">
     <h1>Why Choose <br></br> Us?</h1>
     <div class="root1">
-        <div class="sec1">
+        <div class="section1">
             <span class="circle">
                 <i class="fa-solid fa-briefcase fa-3x" style= {{color: "#ffffff"}}></i>
             </span><br />
             <h1>Innovative Solutions</h1>
             <p>We leverage the latest technologies to create bespoke solutions that meet your unique needs.</p>
         </div>
-        <div class="sec2">
+        <div class="section2">
             <span class="circle">
                 <i class="fa-solid fa-code fa-3x" style={{color: "#ffffff"}}></i>
             </span><br />
@@ -115,18 +151,15 @@ function Services() {
             <p>Our skilled professionals bring deep industry knowledge and technical expertise to every project.</p>
         </div>
     </div>
-    <div class="root2">
-        <img src="/Mdot_Logo.jpg" alt="profile picture" />
-    </div>
     <div class="root3">
-        <div class="sec3">
+        <div class="section3">
             <span class="circle">
                 <i class="fa-solid fa-headset fa-3x" style={{color: "#ffffff"}}></i>
             </span><br />
             <h1>Client-Centric Approach</h1>
             <p>We prioritize your business objectives and work closely with you to achieve them.</p>
         </div>
-        <div class="sec4">
+        <div class="section4">
             <span class="circle">
                 <i class="fa-solid fa-rocket fa-3x" style={{color: "#ffffff"}}></i>
             </span><br />
@@ -148,21 +181,21 @@ function Services() {
           <p><strong>Email:</strong> xyz@gmail.com</p>
         </div>
         <div className="service-contact-form">
-          <form>
+          <form onSubmit={handleSubmit}>
             <div className="service-form-row">
               
-              <input type="text" id="name" name="name" placeholder="Your Name" required />
+              <input type="text" id="name" name="name" placeholder="Your Name" required value={name} onChange={(e) => setName(e.target.value)}/>
               </div>
               <div className="service-form-row">
-              <input type="text" id="mobile" name="mobile" placeholder="Your Mobile Number" required />
+              <input type="text" id="mobile" name="mobile" placeholder="Your Mobile Number" required value={mobile} onChange={(e) => setMobile(e.target.value)}/>
             </div>
             <div className="service-form-row">
               
-              <input type="email" id="email" name="email" placeholder="Your Email" required />
+              <input type="email" id="email" name="email" placeholder="Your Email" required value={email} onChange={(e) => setEmail(e.target.value)}/>
             </div>
             <div className="service-form-row">
               
-              <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+              <textarea id="message" name="message" placeholder="Your Message" required value={message} onChange={(e) => setMessage(e.target.value)}></textarea>
             </div>
             <div className="service-form-row">
               <button type="submit">Send</button>

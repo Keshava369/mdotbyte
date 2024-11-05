@@ -11,10 +11,10 @@
     justify-content: center;
     align-items: center;
     color: white;
-    height: 80vh;
+    height: 90vh;
     text-align: center;
     padding-top: 10vh;
-    position: relative; /* Ensures the background image is properly positioned */
+    position: relative; 
   }
   
   .services-background-video {
@@ -23,8 +23,8 @@
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensures the video covers the entire section */
-    z-index: -1; /* Sends the video behind the text */
+    object-fit: cover; 
+    z-index: -1; 
     filter: brightness(0.4);
   }
   
@@ -48,14 +48,14 @@
     color: white;
     padding: 3rem 2rem;
     text-align: left;
-    opacity: 0; /* Start hidden */
-    transform: translateY(100px); /* Start below the viewport */
-    transition: opacity 1s ease-out, transform 1s ease-out; /* Smooth animation */
+    opacity: 0; 
+    transform: translateY(100px); 
+    transition: opacity 1s ease-out, transform 1s ease-out; 
   }
   
   .services-section.animate {
     opacity: 1;
-    transform: translateY(0); /* Move to original position */
+    transform: translateY(0); 
   }
   
   .services-section h2 {
@@ -73,7 +73,7 @@
   }
   
   .service-card {
-    /* background-color: #333; */
+    
     border-radius: 0px;
     padding: 2rem;
     text-align: center;
@@ -180,7 +180,7 @@
     flex-direction: column;
     text-align: center;
 }
-.sec1{
+.section1{
     width: 100%;
     height: 45vh;
     display: flex;
@@ -189,22 +189,22 @@
     align-items: center;
     row-gap: 5px;
 }
-.sec1 h1{
+.section1 h1{
     margin: 0%;
     letter-spacing: 2px;
     color: #42b883;
     font-size: 25px;
 }
-.sec1 p{
+.section1 p{
     font-style: italic;
     font-weight: 500;
     margin: 10px;
     
 }
-.sec1 .circle{
+.section1 .circle{
     background-color: #42b883;
 }
-.sec2{
+.section2{
     width: 100%;
     height: 45vh;
     display: flex;
@@ -213,18 +213,18 @@
     align-items: center;
     row-gap: 5px;
 }
-.sec2 h1{
+.section2 h1{
     margin: 0%;
     letter-spacing: 2px;
     color: #347474;
     font-size: 25px;
 }
-.sec2 p{
+.section2 p{
     font-style: italic;
     font-weight: 500;
     margin: 10px;
 }
-.sec2 .circle{
+.section2 .circle{
     background-color: #347474;
 }
 .root2{
@@ -248,7 +248,7 @@
     flex-direction: column;
     text-align: center;
 }
-.sec3{
+.section3{
     width: 100%;
     height: 45vh;
     display: flex;
@@ -257,21 +257,21 @@
     align-items: center;
     row-gap: 5px;
 }
-.sec3 h1{
+.section3 h1{
     margin: 0%;
     letter-spacing: 2px;
     color: #35495e;
     font-size: 25px;
 }
-.sec3 p{
+.section3 p{
     font-style: italic;
     font-weight: 500;
     margin: 10px;
 }
-.sec3 .circle{
+.section3 .circle{
     background-color: #35495e;
 }
-.sec4{
+.section4{
     width: 100%;
     height: 45vh;
     display: flex;
@@ -280,18 +280,18 @@
     align-items: center;
     row-gap: 5px;
 }
-.sec4 h1{
+.section4 h1{
     margin: 0%;
     letter-spacing: 2px;
     color: #ff7e67;
     font-size: 25px;
 }
-.sec4 p{
+.section4 p{
     font-style: italic;
     font-weight: 500;
     margin: 10px;
 }
-.sec4 .circle{
+.section4 .circle{
     background-color: #ff7e67;
 }
 @media screen and (max-width:1024px){
@@ -437,6 +437,43 @@
   .service-form-row button:hover {
     background-color:grey;
   }
+
+  
+* {
+  box-sizing: border-box;
+}
+
+
+.service-contact-section, .service-form-row input, .service-form-row textarea, .service-form-row button {
+  max-width: 100%;
+  width: 100%;
+}
+
+
+body {
+  overflow-x: hidden;
+}
+
+
+@media (max-width: 768px) {
+  .service-contact-section {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .service-contact-info {
+    padding-right: 0;
+  }
+
+  .service-contact-form {
+    width: 100%;
+  }
+
+  .service-form-row {
+    padding: 0;
+  }
+}
+
 
 
   
