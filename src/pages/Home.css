@@ -283,3 +283,40 @@
   height: 100%;
   border: 0;
 }
+
+/* Apply to all sections to prevent overflow */
+* {
+  box-sizing: border-box;
+}
+
+/* Limit the width of form elements on smaller screens */
+.contact-section, .form-row input, .form-row textarea, .form-row button {
+  max-width: 100%;
+  width: 100%;
+}
+
+/* Disable horizontal scrolling on smaller screens */
+body {
+  overflow-x: hidden;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .contact-section {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .contact-info {
+    padding-right: 0;
+  }
+
+  .contact-form {
+    width: 100%;
+  }
+
+  .form-row {
+    padding: 0;
+  }
+}
+
