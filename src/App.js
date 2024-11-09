@@ -8,6 +8,7 @@ import AboutUs from './pages/AboutUs';
 import ContactUs from './pages/ContactUs';
 import Overlay from './components/Overlay';
 import Footer from './components/Footer';
+import ScrollTop from './pages/ScrollTop';
 
 function App() {
   const [overlayVisible, setOverlayVisible] = useState(true);
@@ -16,6 +17,7 @@ function App() {
     <Router>
       {overlayVisible && <Overlay onClose={() => setOverlayVisible(false)} />}
       <Navbar />
+      <ScrollTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/services" element={<Services />} />
