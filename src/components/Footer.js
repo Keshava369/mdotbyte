@@ -34,8 +34,8 @@ function Footer() {
         </div>
         <div className="footer-column">
           <h4>Contact</h4>
-          <p>xyz@gmail.com</p>
-          <p>+12 789497891</p>
+          <p>hrmdotbyte@gmail.com</p>
+          <p>+91 8121677527</p>
         </div>
         <div className="footer-social-icons">
           <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">

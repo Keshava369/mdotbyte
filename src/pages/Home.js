@@ -114,8 +114,8 @@ function Home() {
           <p >You are one click away to digitalize your business !!!!!</p>
           <br></br>
           <br></br>
-          <p><strong>Phone:</strong> +91 44974548784, +91 4149418714951</p>
-          <p><strong>Email:</strong> xyz@gmail.com</p>
+          <p><strong>Phone:</strong> +91 8121677527</p>
+          <p><strong>Email:</strong> hrmdotbyte@gmail.com</p>
         </div>
         <div className="contact-form">
           <form onSubmit={handleSubmit}>
