@@ -35,9 +35,9 @@ function Home() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const serviceId = 'service_nbgbay8';
-    const templateId = 'template_d3wdklh';
-    const publicKey = 'RffKyC_2KYrFRmxX6';
+    const serviceId = 'service_cjuvpei';
+    const templateId = 'template_c4b74z2';
+    const publicKey = 'dSR7D_m_xXzOufZXE';
     
     const templateParams ={
          from_name:name,
@@ -114,7 +114,7 @@ function Home() {
           <p >You are one click away to digitalize your business !!!!!</p>
           <br></br>
           <br></br>
-          <p><strong>Phone:</strong> +91 8121677527</p>
+          <p><strong>Phone:</strong> +91 8247433556</p>
           <p><strong>Email:</strong> hrmdotbyte@gmail.com</p>
         </div>
         <div className="contact-form">
@@ -143,7 +143,7 @@ function Home() {
 
       <div className="map-section">
         <iframe
-          src="https://maps.google.com/maps?q=19-261%2C+Lingasetty+Palyam+Street%2C+Near+Ther+Bazar%2C+Dharmavaram%2C+Andhra+Pradesh+-+515671&t=&z=13&ie=UTF8&iwloc=&output=embed"
+          src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1385.991807719052!2d77.5586305319745!3d14.697192807787957!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sin!4v1732874588869!5m2!1sen!2sin"
           width="100%"
           height="400"
           style={{ border: 0 }}

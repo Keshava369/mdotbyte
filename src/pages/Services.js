@@ -34,9 +34,9 @@ function Services() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const serviceId = 'service_nbgbay8';
-    const templateId = 'template_d3wdklh';
-    const publicKey = 'RffKyC_2KYrFRmxX6';
+    const serviceId = 'service_cjuvpei';
+    const templateId = 'template_c4b74z2';
+    const publicKey = 'dSR7D_m_xXzOufZXE';
     
     const templateParams ={
          from_name:name,
@@ -177,7 +177,7 @@ function Services() {
           <p >You are one click away to digitalize your business !!!!!</p>
           <br></br>
           <br></br>
-          <p><strong>Phone:</strong> +91 8121677527</p>
+          <p><strong>Phone:</strong> +91 8247433556</p>
           <p><strong>Email:</strong> hrmdotbyte@gmail.com</p>
         </div>
         <div className="service-contact-form">

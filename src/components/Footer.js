@@ -14,11 +14,11 @@ function Footer() {
         <div className="footer-column">
           <h4>Address</h4>
           <p>MDot Byte Consulting Pvt Ltd</p>
-          <p>19-261,</p>
-          <p>Lingasetty Palyam Street,</p>
-          <p>Near Ther Bazar,</p>
-          <p>Dharmavaram,</p>
-          <p>Andhra Pradesh - 515671</p>
+          <p>Opposite to Sarada Silks,</p>
+          <p>Bellary Road,</p>
+          <p>Syndicate Nagar,</p>
+          <p>Anantapur,</p>
+          <p>Andhra Pradesh - 515004</p>
         </div>
         <div className="footer-column">
           <h4>Services</h4>
@@ -35,7 +35,7 @@ function Footer() {
         <div className="footer-column">
           <h4>Contact</h4>
           <p>hrmdotbyte@gmail.com</p>
-          <p>+91 8121677527</p>
+          <p>+91 8247433556</p>
         </div>
         <div className="footer-social-icons">
           <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
